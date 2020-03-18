@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" class="background">
+  <ion-card *ngFor="let i of isDone; let ii=index">
+  <ion-item *ngIf="i.done">
+    <div class="list-group" class="p-1 mb-1 bg-light text-dark" >
+      <p >Group {{ii}}</p>
+    </div>
+      
+  </ion-item>
+  </ion-card>
+</ion-content>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <button  type="button" class="btn btn-primary" (click)="scanQR()">SCAN</button>
+  </ion-fab-button>
+</ion-fab>

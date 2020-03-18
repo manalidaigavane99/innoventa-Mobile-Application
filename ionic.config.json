@@ -1,0 +1,7 @@
+{
+  "name": "aditiDemo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

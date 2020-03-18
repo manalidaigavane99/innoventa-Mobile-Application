@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item align-self-center>
+    Please , Scan the below generated code
+  </ion-item>
+  <ion-item align-self-auto>
+  <button  type="button" class="btn btn-primary" (click)="createQR()">CREATE QR CODE</button>
+  <!-- <ion-icon name="qr-code-outline">QR</ion-icon> -->
+  </ion-item>
+  <ion-card *ngIf="isdone">
+    <ion-card >
+      <ngx-qrcode [qrc-value]="qrdata[index]"> </ngx-qrcode>
+      <!-- <ion-card-content>
+        <p> value: {{ qrdata[index]}}</p>
+        </ion-card-content> -->
+    </ion-card>
+    <!-- <button  type="button" class="btn btn-primary" (click)="clear()">CLEAR</button> -->
+</ion-card>
+</ion-content>
