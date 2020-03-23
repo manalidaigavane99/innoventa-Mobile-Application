@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>feedback</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item class="ion-margin">
+    Rate Innoventa:
+  </ion-item>
+  <ion-item>
+    <ion-range [(ngModel)] = "eventrating" min="1" max="5" step="1" snaps="true" color="secondary">
+      <ion-icon slot = "start" name="close-circle-outline"></ion-icon>
+      <ion-icon slot = "end" name="checkmark-circle-outline"></ion-icon>
+    </ion-range>
+  </ion-item>
+    {{ eventrating }}
+    <ion-item class="ion-margin">
+      Rate the Innoventa App
+    </ion-item>
+    <ion-item class="ion-padding-bottom">
+    <ion-range [(ngModel)] = "apprating" min="1" max="5" step="1" snaps="true" color="secondary">
+      <ion-icon slot = "start" name="close-circle-outline"></ion-icon>
+      <ion-icon slot = "end" name="checkmark-circle-outline"></ion-icon>
+    </ion-range>
+    {{ apptrating }}
+  </ion-item>
+  <div class="form-group">
+          <label for="comments">comments</label>
+          <input type="text" class="form-control" [(ngModel)]="comments" id="comments" required>
+        </div>
+
+        <div class="form-group">
+          <label for="suggestions">suggestions if any</label>
+          <input type="text" class="form-control" [(ngModel)]="suggestions" id="suggestions">
+        </div>
+
+  <div text-center margin-top margin-end float-right>
+    <ion-button margin-right  color="success" (click)="onSubmit()">
+      Submit
+    </ion-button>
+  </div>
+</ion-content>

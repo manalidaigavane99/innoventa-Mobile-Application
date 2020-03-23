@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Group {{groupId}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="alert alert-info" role="alert">
+   <p>PROJECT TITLE: </p>
+    <p>{{projectTitle}}</p>
+  </div>
+  <div class="alert alert-info" role="alert">
+    <p>PROJECT DESCRIPTION: </p>
+     <p>{{projectDesc}}</p>
+   </div>
+   <p align='center'> EVALUATION</p>
+  <ion-item class="ion-margin">
+    Innovation/Novelty:
+  </ion-item>
+  <ion-item>
+    <ion-range [(ngModel)] = "range1Value" min="1" max="10" step="1" snaps="true" color="secondary">
+      <ion-icon slot = "start" name="close-circle-outline"></ion-icon>
+      <ion-icon slot = "end" name="checkmark-circle-outline"></ion-icon>
+    </ion-range>
+    {{ range1Value }}
+  </ion-item>
+  <ion-item class="ion-margin">
+    Customer Connect:
+  </ion-item>
+  <ion-item>
+      <ion-range [(ngModel)] = "range2Value" min="1" max="10" step="1" snaps="true" color="secondary">
+      <ion-icon slot = "start" name="close-circle-outline"></ion-icon>
+      <ion-icon slot = "end" name="checkmark-circle-outline"></ion-icon>
+    </ion-range>
+    {{ range2Value }}
+  </ion-item>
+<ion-item class="ion-margin">
+  UML Diagram:
+</ion-item>
+<ion-item>
+  <ion-range [(ngModel)] = "range3Value" min="1" max="10" step="1" snaps="true" color="secondary">
+    <ion-icon slot = "start" name="close-circle-outline"></ion-icon>
+    <ion-icon slot = "end" name="checkmark-circle-outline"></ion-icon>
+  </ion-range>
+  {{ range3Value }}
+</ion-item>
+<ion-item class="ion-margin">
+  Technology+Implementation:
+</ion-item>
+<ion-item>
+  <ion-range [(ngModel)] = "range4Value" min="1" max="10" step="1" snaps="true" color="secondary">
+    <ion-icon slot = "start" name="close-circle-outline"></ion-icon>
+    <ion-icon slot = "end" name="checkmark-circle-outline"></ion-icon>
+  </ion-range>
+  {{ range4Value }}
+</ion-item>
+<ion-item class="ion-margin">
+  Presentation + QA:
+</ion-item>
+<ion-item>
+<ion-range [(ngModel)] = "range5Value" min="1" max="10" step="1" snaps="true" color="secondary">
+    <ion-icon slot = "start" name="close-circle-outline"></ion-icon>
+    <ion-icon slot = "end" name="checkmark-circle-outline"></ion-icon>
+  </ion-range>
+  {{ range5Value }}
+</ion-item>
+
+  <div text-center margin-top margin-end float-right>
+    <ion-button margin-right  color="success" (click)="onSubmit()">
+      Submit
+    </ion-button>
+  </div>
+</ion-content>
